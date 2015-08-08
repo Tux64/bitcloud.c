@@ -1,5 +1,5 @@
-CFLAGS=-Wall `pkg-config --cflags sqlite3`
-LDLIBS=`pkg-config --libs sqlite3`
+CFLAGS=-Wall `pkg-config --cflags sqlite3 libuv`
+LDLIBS=`pkg-config --libs sqlite3 libuv`
 
 bitcloud: main.o bitcloud.a
 	$(CC) -o $@ $^ $(LDLIBS)
